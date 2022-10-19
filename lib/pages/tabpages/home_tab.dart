@@ -5,72 +5,119 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:youtubeui/pages/constants.dart';
 import 'package:youtubeui/pages/containers/home_itemcontainer.dart';
 
+import '../containers/circular_container.dart';
+
 class Home_tab extends StatelessWidget {
   const Home_tab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final Size screensize = MediaQuery.of(context).size;
-    return Scaffold(
-        body: SafeArea(
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.white,
+            title: Container(
+              decoration: BoxDecoration(color: Colors.transparent),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        width: screensize.width * 0.11,
+                        height: screensize.width * 0.08,
+                        decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(8),
+                            image: DecorationImage(
+                                image: AssetImage('assets/youtube.png'),
+                                fit: BoxFit.fitHeight)),
+                      ),
+                      Text('YouTube',
+                          style: GoogleFonts.lato(
+                              color: constblack,
+                              fontSize: 21,
+                              fontWeight: FontWeight.w700))
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      IconButton(
+                          onPressed: () {},
+                          icon: ImageIcon(AssetImage('assets/cast.png'))),
+                      SizedBox(
+                        width: screensize.width * 0.01,
+                      ),
+                      IconButton(
+                          onPressed: () {},
+                          icon: ImageIcon(AssetImage('assets/bell.png'))),
+                      SizedBox(
+                        width: screensize.width * 0.01,
+                      ),
+                      IconButton(
+                          onPressed: () {},
+                          icon: ImageIcon(AssetImage('assets/search.png'))),
+                      SizedBox(
+                        width: screensize.width * 0.01,
+                      ),
+                      CircleAvatar(
+                        radius: 17,
+                        backgroundImage: AssetImage('assets/mohanlal.jpg'),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            bottom: TabBar(
+                isScrollable: true,
+                labelColor: Colors.blue,
+                unselectedLabelColor: constblack,
+                unselectedLabelStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+                indicatorColor: constblack,
+                labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                tabs: [
+                  Tab(
+                    text: 'All',
+                  ),
+                  Tab(
+                    text: 'Malayalam',
+                  ),
+                  Tab(
+                    text: 'Songs',
+                  ),
+                  Tab(
+                    text: 'Mixed',
+                  )
+                ]),
+          ),
+          body: TabBarView(children: [
+            Home_tab1(),
+            Home_tab2(),
+            Home_tab1(),
+            Home_tab2(),
+          ])),
+    );
+  }
+}
+
+class Home_tab1 extends StatelessWidget {
+  const Home_tab1({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final Size screensize = MediaQuery.of(context).size;
+    return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Expanded(
           child: Column(
             children: [
-              Container(
-                decoration: BoxDecoration(color: Colors.transparent),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          width: screensize.width * 0.11,
-                          height: screensize.width * 0.08,
-                          decoration: BoxDecoration(
-                              color: Colors.transparent,
-                              borderRadius: BorderRadius.circular(8),
-                              image: DecorationImage(
-                                  image: AssetImage('assets/youtube.png'),
-                                  fit: BoxFit.fitHeight)),
-                        ),
-                        Text('YouTube',
-                            style: GoogleFonts.lato(
-                                color: constblack,
-                                fontSize: 21,
-                                fontWeight: FontWeight.w700))
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        IconButton(
-                            onPressed: () {},
-                            icon: ImageIcon(AssetImage('assets/cast.png'))),
-                        SizedBox(
-                          width: screensize.width * 0.01,
-                        ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: ImageIcon(AssetImage('assets/bell.png'))),
-                        SizedBox(
-                          width: screensize.width * 0.01,
-                        ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: ImageIcon(AssetImage('assets/search.png'))),
-                        SizedBox(
-                          width: screensize.width * 0.01,
-                        ),
-                        CircleAvatar(
-                          radius: 17,
-                          backgroundImage: AssetImage('assets/mohanlal.jpg'),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+              ///
               SizedBox(
                 height: screensize.width * 0.04,
               ),
@@ -183,6 +230,93 @@ class Home_tab extends StatelessWidget {
           ),
         ),
       ),
-    ));
+    );
+  }
+}
+
+class Home_tab2 extends StatelessWidget {
+  const Home_tab2({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final Size screensize = MediaQuery.of(context).size;
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Expanded(
+          child: Column(
+            children: [
+              ///
+              SizedBox(
+                height: screensize.width * 0.04,
+              ),
+              //itemcontainers
+              Expanded(
+                child: ListView(
+                  children: [
+                    //1
+                    Home_item_container(
+                      mainimagepath:
+                          'https://i.ytimg.com/vi/Bm48lOWNpBI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBG07htEjudcUvmTxoyHQpOIsrLYQ',
+                      iconprofilepath:
+                          'https://yt3.ggpht.com/vi9ISqnoFfpa1J7WQMxxs2YKkhCh2mLy4DMRh9wqOre1VZ4DdLGGBDxMjUtHzCNqRySnZ0LqjOM=s68-c-k-c0x00ffffff-no-rj',
+                      maintitle: 'Olemelody Songs|Thallumala Video Song|',
+                      subtitle: 'Malayalam News',
+                      chanelname: 'Music24*7',
+                      views: '12',
+                      durations: '04:36',
+                      month: '08',
+                      KorM: 'M',
+                    ),
+                    //2
+                    Home_item_container(
+                      mainimagepath:
+                          'https://i.ytimg.com/vi/JCwe0TRb4Sg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCuNc4-G43R-UO87Fl95wavzbrhsw',
+                      iconprofilepath:
+                          'https://yt3.ggpht.com/Ybu5mW939QWZsOAxzsf1sOqHIFKf8QwY00Rt50hBLxJBjP5INAeD2zSnUMHn1uE6vf_rGwf2Wg=s68-c-k-c0x00ffffff-no-rj',
+                      maintitle: '1000 BUble Gum Gaint | Bubble Making ',
+                      subtitle: 'Vlog',
+                      chanelname: 'M4 Tech',
+                      views: '08',
+                      durations: '36:28',
+                      month: '11',
+                      KorM: 'M',
+                    ),
+                    //3
+                    Home_item_container(
+                      mainimagepath:
+                          'https://i.ytimg.com/vi/6LD30ChPsSs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDO-GZK3YdHEcZGArxX2oJKosvBMA',
+                      iconprofilepath:
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBW5CThfWg_RNQjZ3OSAO2sLBYtWJFKm2pUw&usqp=CAU',
+                      maintitle: '96 Songs|The Life of Ram Video Song|',
+                      subtitle: 'Tamil Thirai',
+                      chanelname: 'Think music',
+                      views: '106',
+                      durations: '04:30',
+                      month: '11',
+                      KorM: 'M',
+                    ),
+                    //4
+                    Home_item_container(
+                      mainimagepath:
+                          'https://i.ytimg.com/vi/xLtfisGoMeg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAf8Ey-qr0SqqGVhZRGAzD72eK-kQ',
+                      iconprofilepath:
+                          'https://yt3.ggpht.com/ytc/AMLnZu9XGUotiX-6NfTEUKwRbgMdi-9nSwgogsReo8FR0g=s68-c-k-c0x00ffffff-no-rj',
+                      maintitle: 'Sandhanam Theme Video | Vikram |',
+                      subtitle: 'Music',
+                      chanelname: 'Sony music',
+                      views: '106',
+                      durations: '04:30',
+                      month: '06',
+                      KorM: 'M',
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
