@@ -13,6 +13,7 @@ class Home_item_container extends StatelessWidget {
   final String views;
   final String month;
   final String durations;
+  final String KorM;
   const Home_item_container(
       {Key? key,
       required this.mainimagepath,
@@ -22,6 +23,7 @@ class Home_item_container extends StatelessWidget {
       required this.chanelname,
       required this.views,
       required this.durations,
+      required this.KorM,
       required this.month})
       : super(key: key);
 
@@ -71,8 +73,7 @@ class Home_item_container extends StatelessWidget {
                   padding: EdgeInsets.only(bottom: screensize.width * 0.08),
                   child: CircleAvatar(
                     radius: 20,
-                    backgroundImage: NetworkImage(
-                       iconprofilepath),
+                    backgroundImage: NetworkImage(iconprofilepath),
                   ),
                 ),
                 SizedBox(
@@ -84,7 +85,7 @@ class Home_item_container extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      width: screensize.width * 0.633,
+                      width: screensize.width * 0.68,
                       decoration: BoxDecoration(color: Colors.transparent),
                       child: Text(
                         maintitle,
@@ -92,26 +93,44 @@ class Home_item_container extends StatelessWidget {
                             color: constblack, fontWeight: FontWeight.bold),
                       ),
                     ),
+                    SizedBox(
+                      height: screensize.width * 0.02,
+                    ),
                     Text(
-                     subtitle,
+                      subtitle,
                       style: TextStyle(
                           color: constblack, fontWeight: FontWeight.bold),
                     ),
-                    Text(
-                      '${chanelname} . ${views}K views . ${month} days ago',
-                      style: TextStyle(
-                          color: constblack, fontWeight: FontWeight.bold),
+                    SizedBox(
+                      height: screensize.width * 0.02,
+                    ),
+                    Container(
+                      width: screensize.width * 0.68,
+                      decoration: BoxDecoration(color: Colors.transparent),
+                      child: Text(
+                        '${chanelname} . ${views}${KorM} views . ${month}days ago',
+                        style: TextStyle(
+                            color: constblack, fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ],
                 ),
+
+                // )
+                SizedBox(
+                  width: screensize.width * 0.03,
+                ),
                 Padding(
                   padding: EdgeInsets.only(bottom: screensize.width * 0.1),
-                  child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.more_vert,
-                        color: Colors.black,
-                      )),
+                  child: Container(
+                    width: screensize.width * 0.04,
+                    height: screensize.width * 0.09,
+                    decoration: BoxDecoration(color: Colors.transparent),
+                    child: Icon(
+                      Icons.more_vert,
+                      color: constblack,
+                    ),
+                  ),
                 )
               ],
             ),

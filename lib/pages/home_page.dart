@@ -20,7 +20,7 @@ class _Home_pageState extends State<Home_page> {
     Shorts_tab(),
     Create_tab(),
     Subscription_tab(),
-    Library_tab(),
+    Libraray_tab(),
   ];
   int _selectedindex = 0;
 
