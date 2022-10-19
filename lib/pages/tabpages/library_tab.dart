@@ -49,20 +49,22 @@ class Libraray_tab extends StatelessWidget {
                           children: [
                             IconButton(
                                 onPressed: () {},
-                                icon: const ImageIcon(AssetImage('assets/cast.png'))),
+                                icon: const ImageIcon(
+                                    AssetImage('assets/cast.png'))),
                             SizedBox(
                               width: screensize.width * 0.01,
                             ),
                             IconButton(
                                 onPressed: () {},
-                                icon: const ImageIcon(AssetImage('assets/bell.png'))),
+                                icon: const ImageIcon(
+                                    AssetImage('assets/bell.png'))),
                             SizedBox(
                               width: screensize.width * 0.01,
                             ),
                             IconButton(
                                 onPressed: () {},
-                                icon:
-                                    const ImageIcon(AssetImage('assets/search.png'))),
+                                icon: const ImageIcon(
+                                    AssetImage('assets/search.png'))),
                             SizedBox(
                               width: screensize.width * 0.01,
                             ),
@@ -98,27 +100,27 @@ class Libraray_tab extends StatelessWidget {
                         ),
                         child: ListView(
                           scrollDirection: Axis.horizontal,
-                          children:const [
+                          children: const [
                             //1
-                             Library_container(
+                            Library_container(
                                 imagepath:
                                     'https://i.ytimg.com/vi/aEqM218qljU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCM2oPCekICmFhSi2TcJIJkd6dD0Q',
                                 title: 'Rolex Entry bgm',
                                 chanaelname: 'Runny list'),
                             //2
-                             Library_container(
+                            Library_container(
                                 imagepath:
                                     'https://i.ytimg.com/vi/JsH1CEIMuYo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDybxkO0crNxChAQmzlS8pNDN2-DQ',
                                 title: 'Kappa official ||',
                                 chanaelname: 'Kappa Music'),
                             //3
-                             Library_container(
+                            Library_container(
                                 imagepath:
                                     'https://i.ytimg.com/vi/wbYG8T80SOk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDgRKGfg7oc_cdlRMP-ac6hpANdpA',
                                 title: 'Ponnin Nadhi',
                                 chanaelname: 'Tamil tips'),
                             //4
-                             Library_container(
+                            Library_container(
                                 imagepath:
                                     'https://i.ytimg.com/vi/v1yfTA0MU2s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA4AB-213OPBS1l2HdCztbrcWmeTA',
                                 title: 'Crypto options',
@@ -133,8 +135,8 @@ class Libraray_tab extends StatelessWidget {
                           width: double.infinity,
                           height: screensize.width * 0.7,
                           decoration: BoxDecoration(
-                              color: Colors.transparent,
-                              border: Border.all(color: Colors.black45)),
+                            color: Colors.transparent,
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
@@ -149,7 +151,7 @@ class Libraray_tab extends StatelessWidget {
                                   ),
                                   const Text(
                                     'History',
-                                    style:  TextStyle(
+                                    style: TextStyle(
                                         color: constblack,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20),
@@ -162,7 +164,7 @@ class Libraray_tab extends StatelessWidget {
                               Row(
                                 children: [
                                   const ImageIcon(
-                                     AssetImage('assets/yourvideos.png'),
+                                    AssetImage('assets/yourvideos.png'),
                                     color: constblack,
                                   ),
                                   SizedBox(
@@ -183,7 +185,7 @@ class Libraray_tab extends StatelessWidget {
                               Row(
                                 children: [
                                   const ImageIcon(
-                                     AssetImage('assets/download-multiple.png'),
+                                    AssetImage('assets/download-multiple.png'),
                                     color: constblack,
                                   ),
                                   SizedBox(
@@ -204,7 +206,7 @@ class Libraray_tab extends StatelessWidget {
                               Row(
                                 children: [
                                   const ImageIcon(
-                                     AssetImage('assets/yourmovies.png'),
+                                    AssetImage('assets/yourmovies.png'),
                                     color: constblack,
                                   ),
                                   SizedBox(
@@ -233,7 +235,7 @@ class Libraray_tab extends StatelessWidget {
                                   ),
                                   const Text(
                                     'Watch later',
-                                    style:  TextStyle(
+                                    style: TextStyle(
                                         color: constblack,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20),
@@ -248,8 +250,8 @@ class Libraray_tab extends StatelessWidget {
                     height: screensize.width * 0.06,
                   ),
                   const Text(
-                    'Recent',
-                    style:  TextStyle(
+                    'Playlists',
+                    style: TextStyle(
                         color: constblack,
                         fontWeight: FontWeight.bold,
                         fontSize: 18),
