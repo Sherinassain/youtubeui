@@ -17,7 +17,7 @@ class Home_tab extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              decoration: BoxDecoration(color: Colors.red),
+              decoration: BoxDecoration(color: Colors.transparent),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -61,7 +61,7 @@ class Home_tab extends StatelessWidget {
                         width: screensize.width * 0.01,
                       ),
                       CircleAvatar(
-                        radius: 15,
+                        radius: 17,
                         backgroundImage: AssetImage('assets/mohanlal.jpg'),
                       )
                     ],
@@ -72,29 +72,7 @@ class Home_tab extends StatelessWidget {
             SizedBox(
               height: screensize.width * 0.04,
             ),
-            Stack(
-              children: [
-                Container(
-                  height: screensize.width * 0.5,
-                  width: double.infinity,
-                  decoration: BoxDecoration(color: Colors.deepPurple),
-                ),
-                Positioned(
-                  top: screensize.width * 0.42,
-                  left: screensize.width * 0.83,
-                  child: Container(
-                    width: screensize.width * 0.09,
-                    height: screensize.width * 0.052,
-                    decoration: BoxDecoration(color: constblack),
-                    child: Text(
-                      '1:56',
-                      style: TextStyle(
-                          color: constwhite, fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-              ],
-            )
+       //itemcontainers
           ],
         ),
       ),
