@@ -19,7 +19,7 @@ class Home_tab extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.white,
             title: Container(
-              decoration: BoxDecoration(color: Colors.transparent),
+              decoration: const BoxDecoration(color: Colors.transparent),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -31,7 +31,7 @@ class Home_tab extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.transparent,
                             borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage('assets/youtube.png'),
                                 fit: BoxFit.fitHeight)),
                       ),
@@ -46,23 +46,23 @@ class Home_tab extends StatelessWidget {
                     children: [
                       IconButton(
                           onPressed: () {},
-                          icon: ImageIcon(AssetImage('assets/cast.png'))),
+                          icon: const ImageIcon(AssetImage('assets/cast.png'))),
                       SizedBox(
                         width: screensize.width * 0.01,
                       ),
                       IconButton(
                           onPressed: () {},
-                          icon: ImageIcon(AssetImage('assets/bell.png'))),
+                          icon: const ImageIcon( AssetImage('assets/bell.png'))),
                       SizedBox(
                         width: screensize.width * 0.01,
                       ),
                       IconButton(
                           onPressed: () {},
-                          icon: ImageIcon(AssetImage('assets/search.png'))),
+                          icon: const ImageIcon(AssetImage('assets/search.png'))),
                       SizedBox(
                         width: screensize.width * 0.01,
                       ),
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 17,
                         backgroundImage: AssetImage('assets/mohanlal.jpg'),
                       )
@@ -71,7 +71,7 @@ class Home_tab extends StatelessWidget {
                 ],
               ),
             ),
-            bottom: TabBar(
+            bottom: const TabBar(
                 isScrollable: true,
                 labelColor: Colors.blue,
                 unselectedLabelColor: constblack,
@@ -79,7 +79,7 @@ class Home_tab extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
                 indicatorColor: constblack,
-                labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                labelStyle:  TextStyle(fontWeight: FontWeight.bold),
                 tabs: [
                   Tab(
                     text: 'All',
@@ -90,15 +90,15 @@ class Home_tab extends StatelessWidget {
                   Tab(
                     text: 'Songs',
                   ),
-                  Tab(
+                   Tab(
                     text: 'Mixed',
                   )
                 ]),
           ),
-          body: TabBarView(children: [
+          body: const TabBarView(children: [
             Home_tab1(),
             Home_tab2(),
-            Home_tab1(),
+            const Home_tab1(),
             Home_tab2(),
           ])),
     );
@@ -124,9 +124,9 @@ class Home_tab1 extends StatelessWidget {
               //itemcontainers
               Expanded(
                 child: ListView(
-                  children: [
+                  children:const [
                     //1
-                    Home_item_container(
+                     Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/vi/OM1Y8LBHraY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6XPK71QFvnw7f852oWoY9muv6kA',
                       iconprofilepath:
@@ -140,7 +140,7 @@ class Home_tab1 extends StatelessWidget {
                       KorM: 'M',
                     ),
                     //2
-                    Home_item_container(
+                     Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/vi/6LD30ChPsSs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDO-GZK3YdHEcZGArxX2oJKosvBMA',
                       iconprofilepath:
@@ -154,7 +154,7 @@ class Home_tab1 extends StatelessWidget {
                       KorM: 'M',
                     ),
                     //3
-                    Home_item_container(
+                     Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/vi/_kcJyReMpx0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBh-RfC2Css0Mh7192iMO8Vfkqvjw',
                       iconprofilepath:
@@ -168,7 +168,7 @@ class Home_tab1 extends StatelessWidget {
                       KorM: 'K',
                     ),
                     //4
-                    Home_item_container(
+                     Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/an_webp/31nqsOYjhEo/mqdefault_6s.webp?du=3000&sqp=CKyvv5oG&rs=AOn4CLBPBeUQfTQfyZ6YuXqe2Cej3h10Jg',
                       iconprofilepath:
@@ -182,7 +182,7 @@ class Home_tab1 extends StatelessWidget {
                       KorM: 'M',
                     ),
                     //5
-                    Home_item_container(
+                     Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/vi/PNR06O9sSio/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD5N1vUmy--R-_l9a67Tu80wPQy9Q',
                       iconprofilepath:
@@ -196,7 +196,7 @@ class Home_tab1 extends StatelessWidget {
                       KorM: 'K',
                     ),
                     //6
-                    Home_item_container(
+                     Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/vi/pJ4hrq3VXFk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_DlJTz_feI_tXXHop6F_u-nS-iA',
                       iconprofilepath:
@@ -210,7 +210,7 @@ class Home_tab1 extends StatelessWidget {
                       KorM: 'K',
                     ),
                     //7
-                    Home_item_container(
+                     Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/an_webp/RJB-KCDfPTI/mqdefault_6s.webp?du=3000&sqp=CN7Bv5oG&rs=AOn4CLB5nXMi7TkUha3JTiWyIEjJ8FdGcw',
                       iconprofilepath:
@@ -255,7 +255,7 @@ class Home_tab2 extends StatelessWidget {
                 child: ListView(
                   children: [
                     //1
-                    Home_item_container(
+                    const Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/vi/Bm48lOWNpBI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBG07htEjudcUvmTxoyHQpOIsrLYQ',
                       iconprofilepath:
@@ -269,7 +269,7 @@ class Home_tab2 extends StatelessWidget {
                       KorM: 'M',
                     ),
                     //2
-                    Home_item_container(
+                    const Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/vi/JCwe0TRb4Sg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCuNc4-G43R-UO87Fl95wavzbrhsw',
                       iconprofilepath:
@@ -283,7 +283,7 @@ class Home_tab2 extends StatelessWidget {
                       KorM: 'M',
                     ),
                     //3
-                    Home_item_container(
+                    const Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/vi/6LD30ChPsSs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDO-GZK3YdHEcZGArxX2oJKosvBMA',
                       iconprofilepath:
@@ -297,7 +297,7 @@ class Home_tab2 extends StatelessWidget {
                       KorM: 'M',
                     ),
                     //4
-                    Home_item_container(
+                    const Home_item_container(
                       mainimagepath:
                           'https://i.ytimg.com/vi/xLtfisGoMeg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAf8Ey-qr0SqqGVhZRGAzD72eK-kQ',
                       iconprofilepath:

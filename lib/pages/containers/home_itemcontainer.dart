@@ -48,11 +48,11 @@ class Home_item_container extends StatelessWidget {
               child: Container(
                 width: screensize.width * 0.1,
                 height: screensize.width * 0.052,
-                decoration: BoxDecoration(color: constblack),
+                decoration: const BoxDecoration(color: constblack),
                 child: Text(
                   durations,
                   style:
-                      TextStyle(color: constwhite, fontWeight: FontWeight.bold),
+                      const TextStyle(color: constwhite, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -64,7 +64,7 @@ class Home_item_container extends StatelessWidget {
         Container(
           height: screensize.width * 0.23,
           width: double.infinity,
-          decoration: BoxDecoration(color: Colors.transparent),
+          decoration: const BoxDecoration(color: Colors.transparent),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -86,10 +86,10 @@ class Home_item_container extends StatelessWidget {
                   children: [
                     Container(
                       width: screensize.width * 0.68,
-                      decoration: BoxDecoration(color: Colors.transparent),
+                      decoration: const BoxDecoration(color: Colors.transparent),
                       child: Text(
                         maintitle,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: constblack, fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -98,7 +98,7 @@ class Home_item_container extends StatelessWidget {
                     ),
                     Text(
                       subtitle,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: constblack, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
@@ -106,10 +106,10 @@ class Home_item_container extends StatelessWidget {
                     ),
                     Container(
                       width: screensize.width * 0.68,
-                      decoration: BoxDecoration(color: Colors.transparent),
+                      decoration: const BoxDecoration(color: Colors.transparent),
                       child: Text(
                         '${chanelname} . ${views}${KorM} views . ${month}days ago',
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: constblack, fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -125,8 +125,8 @@ class Home_item_container extends StatelessWidget {
                   child: Container(
                     width: screensize.width * 0.04,
                     height: screensize.width * 0.09,
-                    decoration: BoxDecoration(color: Colors.transparent),
-                    child: Icon(
+                    decoration: const BoxDecoration(color: Colors.transparent),
+                    child: const Icon(
                       Icons.more_vert,
                       color: constblack,
                     ),

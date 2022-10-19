@@ -27,7 +27,7 @@ class Cirular_container extends StatelessWidget {
           Text(
             title,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(color: constblack, fontWeight: FontWeight.bold),
+            style: const TextStyle(color: constblack, fontWeight: FontWeight.bold),
           ),
         ],
       ),

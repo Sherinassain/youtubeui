@@ -36,7 +36,7 @@ class Library_container extends StatelessWidget {
           Container(
             width: screensize.width * 0.4,
             height: screensize.width * 0.15,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.transparent,
             ),
             child: Row(
@@ -49,7 +49,7 @@ class Library_container extends StatelessWidget {
                       title,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: constblack,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
@@ -61,7 +61,7 @@ class Library_container extends StatelessWidget {
                       chanaelname,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.grey,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
@@ -73,8 +73,8 @@ class Library_container extends StatelessWidget {
                   child: Container(
                     width: screensize.width * 0.04,
                     height: screensize.width * 0.09,
-                    decoration: BoxDecoration(color: Colors.transparent),
-                    child: Icon(
+                    decoration: const BoxDecoration(color: Colors.transparent),
+                    child: const Icon(
                       Icons.more_vert,
                       color: constblack,
                     ),

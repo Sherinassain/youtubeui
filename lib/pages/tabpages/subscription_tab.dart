@@ -19,7 +19,7 @@ class Subscription_tab extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                decoration: BoxDecoration(color: Colors.transparent),
+                decoration: const BoxDecoration(color: Colors.transparent),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -31,8 +31,8 @@ class Subscription_tab extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.transparent,
                               borderRadius: BorderRadius.circular(8),
-                              image: DecorationImage(
-                                  image: AssetImage('assets/youtube.png'),
+                              image: const DecorationImage(
+                                  image:  AssetImage('assets/youtube.png'),
                                   fit: BoxFit.fitHeight)),
                         ),
                         Text('YouTube',
@@ -46,23 +46,23 @@ class Subscription_tab extends StatelessWidget {
                       children: [
                         IconButton(
                             onPressed: () {},
-                            icon: ImageIcon(AssetImage('assets/cast.png'))),
+                            icon: const ImageIcon(AssetImage('assets/cast.png'))),
+                        SizedBox(
+                          width: screensize.width * 0.01,
+                        ),
+                       IconButton(
+                            onPressed: () {},
+                            icon: const ImageIcon( AssetImage('assets/bell.png'))),
                         SizedBox(
                           width: screensize.width * 0.01,
                         ),
                         IconButton(
                             onPressed: () {},
-                            icon: ImageIcon(AssetImage('assets/bell.png'))),
+                            icon: const ImageIcon(AssetImage('assets/search.png'))),
                         SizedBox(
                           width: screensize.width * 0.01,
                         ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: ImageIcon(AssetImage('assets/search.png'))),
-                        SizedBox(
-                          width: screensize.width * 0.01,
-                        ),
-                        CircleAvatar(
+                        const CircleAvatar(
                           radius: 17,
                           backgroundImage: AssetImage('assets/mohanlal.jpg'),
                         )
@@ -74,13 +74,13 @@ class Subscription_tab extends StatelessWidget {
               Container(
                 height: screensize.width * 0.2,
                 width: double.infinity,
-                decoration: BoxDecoration(color: Colors.transparent),
+                decoration: const BoxDecoration(color: Colors.transparent),
                 child: Row(
                   children: [
                     Container(
                       height: screensize.width * 0.2,
                       width: screensize.width * 0.8,
-                      decoration: BoxDecoration(color: Colors.transparent),
+                      decoration: const BoxDecoration(color: Colors.transparent),
                       child: Column(
                         children: [
                           SizedBox(
@@ -90,24 +90,24 @@ class Subscription_tab extends StatelessWidget {
                           Expanded(
                             child: ListView(
                               scrollDirection: Axis.horizontal,
-                              children: [
-                                Cirular_container(
+                              children:const [
+                                 Cirular_container(
                                     imagepath:
                                         'https://yt3.ggpht.com/103caAxR8dUgicN3Fy1p2X_8txHZX0yz5kcqDAgLYbQnlpbU0884qg7bVLbKYN3Kjne9MJTYxA=s900-c-k-c0x00ffffff-no-rj',
                                     title: 'anandhu'),
-                                Cirular_container(
+                                 Cirular_container(
                                     imagepath:
                                         'https://i.pinimg.com/originals/41/6c/fa/416cfafa95c3c7bbb7c572ed5da859ce.jpg',
                                     title: 'Dq'),
-                                Cirular_container(
+                                 Cirular_container(
                                     imagepath:
                                         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvbSkAE54C49PS45ZolicsSrwdJNCJTyFQZ6WqcGY9q33Avy9dGNmCexW3AmsvYsOhqOY&usqp=CAU',
                                     title: 'Asianet'),
-                                Cirular_container(
+                                 Cirular_container(
                                     imagepath:
                                         'https://upload.wikimedia.org/wikipedia/en/9/94/Mathrubhumi_News_Logo.jpg',
                                     title: 'Mathrubhumi'),
-                                Cirular_container(
+                                 Cirular_container(
                                     imagepath:
                                         'https://www.twentyfournews.com/wp-content/uploads/2019/11/24-logo-HD.jpg',
                                     title: '24 News'),
@@ -120,12 +120,12 @@ class Subscription_tab extends StatelessWidget {
                     Expanded(
                       child: Container(
                         height: screensize.width * 0.2,
-                        decoration: BoxDecoration(color: Colors.transparent),
-                        child: Center(
+                        decoration: const BoxDecoration(color: Colors.transparent),
+                        child: const Center(
                           child: Text(
                             'ALL',
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
+                            style:  TextStyle(
                                 color: Colors.blue,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -137,9 +137,9 @@ class Subscription_tab extends StatelessWidget {
               ),
               Expanded(
                   child: ListView(
-                children: [
+                children:const [
                   //1
-                  Home_item_container(
+                   Home_item_container(
                     mainimagepath:
                         'https://i.ytimg.com/vi/Bm48lOWNpBI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBG07htEjudcUvmTxoyHQpOIsrLYQ',
                     iconprofilepath:
@@ -153,7 +153,7 @@ class Subscription_tab extends StatelessWidget {
                     KorM: 'M',
                   ),
                   //2
-                  Home_item_container(
+                   Home_item_container(
                     mainimagepath:
                         'https://i.ytimg.com/vi/JCwe0TRb4Sg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCuNc4-G43R-UO87Fl95wavzbrhsw',
                     iconprofilepath:
@@ -167,7 +167,7 @@ class Subscription_tab extends StatelessWidget {
                     KorM: 'M',
                   ),
                   //3
-                  Home_item_container(
+                   Home_item_container(
                     mainimagepath:
                         'https://i.ytimg.com/vi/6LD30ChPsSs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDO-GZK3YdHEcZGArxX2oJKosvBMA',
                     iconprofilepath:
@@ -181,7 +181,7 @@ class Subscription_tab extends StatelessWidget {
                     KorM: 'M',
                   ),
                   //4
-                  Home_item_container(
+                   Home_item_container(
                     mainimagepath:
                         'https://i.ytimg.com/vi/xLtfisGoMeg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAf8Ey-qr0SqqGVhZRGAzD72eK-kQ',
                     iconprofilepath:

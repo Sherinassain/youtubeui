@@ -12,7 +12,7 @@ class Shorts_tab extends StatelessWidget {
       body: SafeArea(
           child: PageView(
         scrollDirection: Axis.vertical,
-        children: [
+        children:const [
           Shorts_container(
               imagepath:
                   'https://i.ytimg.com/vi/df-jqz-J-nE/hq720_2.jpg?sqp=-oaymwEdCJgDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLA-hI_Zt_4hcj2jEFIht1x4KfI09A'),
@@ -48,7 +48,7 @@ class Video_widgets extends StatelessWidget {
           ),
           Text(
             title,
-            style: TextStyle(color: constwhite, fontSize: 14),
+            style: const TextStyle(color: constwhite, fontSize: 14),
           ),
         ],
       ),
@@ -82,7 +82,7 @@ class Shorts_container extends StatelessWidget {
                       radius: 30,
                       child: IconButton(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.volume_off,
                             color: constwhite,
                             size: 30,

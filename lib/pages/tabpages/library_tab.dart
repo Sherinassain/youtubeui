@@ -22,7 +22,7 @@ class Libraray_tab extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    decoration: BoxDecoration(color: Colors.transparent),
+                    decoration: const BoxDecoration(color: Colors.transparent),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -34,7 +34,7 @@ class Libraray_tab extends StatelessWidget {
                               decoration: BoxDecoration(
                                   color: Colors.transparent,
                                   borderRadius: BorderRadius.circular(8),
-                                  image: DecorationImage(
+                                  image: const DecorationImage(
                                       image: AssetImage('assets/youtube.png'),
                                       fit: BoxFit.fitHeight)),
                             ),
@@ -49,24 +49,24 @@ class Libraray_tab extends StatelessWidget {
                           children: [
                             IconButton(
                                 onPressed: () {},
-                                icon: ImageIcon(AssetImage('assets/cast.png'))),
+                                icon: const ImageIcon(AssetImage('assets/cast.png'))),
                             SizedBox(
                               width: screensize.width * 0.01,
                             ),
                             IconButton(
                                 onPressed: () {},
-                                icon: ImageIcon(AssetImage('assets/bell.png'))),
+                                icon: const ImageIcon(AssetImage('assets/bell.png'))),
                             SizedBox(
                               width: screensize.width * 0.01,
                             ),
                             IconButton(
                                 onPressed: () {},
                                 icon:
-                                    ImageIcon(AssetImage('assets/search.png'))),
+                                    const ImageIcon(AssetImage('assets/search.png'))),
                             SizedBox(
                               width: screensize.width * 0.01,
                             ),
-                            CircleAvatar(
+                            const CircleAvatar(
                               radius: 17,
                               backgroundImage:
                                   AssetImage('assets/mohanlal.jpg'),
@@ -79,7 +79,7 @@ class Libraray_tab extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Recent',
                         style: TextStyle(
                             color: constblack,
@@ -93,32 +93,32 @@ class Libraray_tab extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         height: screensize.width * 0.4,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.transparent,
                         ),
                         child: ListView(
                           scrollDirection: Axis.horizontal,
-                          children: [
+                          children:const [
                             //1
-                            Library_container(
+                             Library_container(
                                 imagepath:
                                     'https://i.ytimg.com/vi/aEqM218qljU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCM2oPCekICmFhSi2TcJIJkd6dD0Q',
                                 title: 'Rolex Entry bgm',
                                 chanaelname: 'Runny list'),
                             //2
-                            Library_container(
+                             Library_container(
                                 imagepath:
                                     'https://i.ytimg.com/vi/JsH1CEIMuYo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDybxkO0crNxChAQmzlS8pNDN2-DQ',
                                 title: 'Kappa official ||',
                                 chanaelname: 'Kappa Music'),
                             //3
-                            Library_container(
+                             Library_container(
                                 imagepath:
                                     'https://i.ytimg.com/vi/wbYG8T80SOk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDgRKGfg7oc_cdlRMP-ac6hpANdpA',
                                 title: 'Ponnin Nadhi',
                                 chanaelname: 'Tamil tips'),
                             //4
-                            Library_container(
+                             Library_container(
                                 imagepath:
                                     'https://i.ytimg.com/vi/v1yfTA0MU2s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA4AB-213OPBS1l2HdCztbrcWmeTA',
                                 title: 'Crypto options',
@@ -140,16 +140,16 @@ class Libraray_tab extends StatelessWidget {
                             children: [
                               Row(
                                 children: [
-                                  ImageIcon(
+                                  const ImageIcon(
                                     AssetImage('assets/history.png'),
                                     color: constblack,
                                   ),
                                   SizedBox(
                                     width: screensize.width * 0.12,
                                   ),
-                                  Text(
+                                  const Text(
                                     'History',
-                                    style: TextStyle(
+                                    style:  TextStyle(
                                         color: constblack,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20),
@@ -161,14 +161,14 @@ class Libraray_tab extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  ImageIcon(
-                                    AssetImage('assets/yourvideos.png'),
+                                  const ImageIcon(
+                                     AssetImage('assets/yourvideos.png'),
                                     color: constblack,
                                   ),
                                   SizedBox(
                                     width: screensize.width * 0.12,
                                   ),
-                                  Text(
+                                  const Text(
                                     'Your Videos',
                                     style: TextStyle(
                                         color: constblack,
@@ -182,14 +182,14 @@ class Libraray_tab extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  ImageIcon(
-                                    AssetImage('assets/download-multiple.png'),
+                                  const ImageIcon(
+                                     AssetImage('assets/download-multiple.png'),
                                     color: constblack,
                                   ),
                                   SizedBox(
                                     width: screensize.width * 0.12,
                                   ),
-                                  Text(
+                                  const Text(
                                     'Downloads',
                                     style: TextStyle(
                                         color: constblack,
@@ -203,16 +203,16 @@ class Libraray_tab extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  ImageIcon(
-                                    AssetImage('assets/yourmovies.png'),
+                                  const ImageIcon(
+                                     AssetImage('assets/yourmovies.png'),
                                     color: constblack,
                                   ),
                                   SizedBox(
                                     width: screensize.width * 0.12,
                                   ),
-                                  Text(
+                                  const Text(
                                     'Your movies',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         color: constblack,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20),
@@ -224,16 +224,16 @@ class Libraray_tab extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  ImageIcon(
+                                  const ImageIcon(
                                     AssetImage('assets/watchlater.png'),
                                     color: constblack,
                                   ),
                                   SizedBox(
                                     width: screensize.width * 0.12,
                                   ),
-                                  Text(
+                                  const Text(
                                     'Watch later',
-                                    style: TextStyle(
+                                    style:  TextStyle(
                                         color: constblack,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20),
@@ -247,9 +247,9 @@ class Libraray_tab extends StatelessWidget {
                   SizedBox(
                     height: screensize.width * 0.06,
                   ),
-                  Text(
+                  const Text(
                     'Recent',
-                    style: TextStyle(
+                    style:  TextStyle(
                         color: constblack,
                         fontWeight: FontWeight.bold,
                         fontSize: 18),
@@ -261,14 +261,14 @@ class Libraray_tab extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.add,
                             color: Colors.blue,
                           ),
                           SizedBox(
                             width: screensize.width * 0.12,
                           ),
-                          Text(
+                          const Text(
                             'New Playlist',
                             style: TextStyle(
                                 color: Colors.blue,
@@ -282,14 +282,14 @@ class Libraray_tab extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.thumb_up,
                             color: Colors.black,
                           ),
                           SizedBox(
                             width: screensize.width * 0.12,
                           ),
-                          Text(
+                          const Text(
                             'Liked videos',
                             style: TextStyle(
                                 color: constblack,
